@@ -11,7 +11,6 @@ class Queue(AbstractQueue):
     def enqueue(self, value):
         self.queue.append(value)
 
-
     def dequeue(self):
         if len(self.queue) == 0:
             return None
@@ -21,3 +20,6 @@ class Queue(AbstractQueue):
         if not 0 <= index < self.__len__():
             raise IndexError('Índice Inválido ou Inexistente')
         return self.queue[index]
+    
+    def get_list(self):
+        return self.queue
